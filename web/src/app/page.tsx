@@ -1,6 +1,8 @@
+import { Copyright } from '@/componets/copyrigh'
 import { User } from 'lucide-react'
-import nlwlogo from './assets/bg-logo.svg'
 import Image from 'next/image'
+import nlwlogo from './assets/bg-logo.svg'
+
 export default function Home() {
   return (
     <main className="grid min-h-screen grid-cols-2">
@@ -10,8 +12,9 @@ export default function Home() {
         <div className="absolute right-0 top-1/2 h-[288px] w-[526px] -translate-y-1/2 translate-x-1/2 rounded-full bg-purple-700 opacity-50 blur-full " />
         {/* Stripes */}
         <div className="absolute bottom-0 right-2 top-0 w-2 bg-stripes" />
+        {/* Sign In */}
         <a
-          href=""
+          href={`https://github.com/login/oauth/authorize?client_id=${process.env.NEXT_PUBLIC_GITHUB_CLIENT_ID}`}
           className=" flex items-center gap-3 text-left transition-colors hover:text-gray-50"
         >
           <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-400">
@@ -41,27 +44,12 @@ export default function Home() {
           >
             Cadastrar lembrança
           </a>
-        </div>
+        </div>{' '}
         {/* Copyright */}
-        <div className=" text-sm text-gray-50 ">
-          <p>
-            {' '}
-            Feito com 💜 no NLW da{' '}
-            <a
-              className=" underline"
-              target="_blank"
-              href="https://rocketseat.com.br"
-              rel="noreferrer"
-            >
-              Rocketseat
-            </a>{' '}
-            - Reprodução Rafael 💜{' '}
-          </p>
-        </div>
+        <Copyright />
       </div>
 
       {/* Right */}
-
       <div className="flex flex-col bg-[url(./assets/bg-stars.svg)] bg-cover p-16">
         <div className="flex flex-1 items-center justify-center">
           <p className="w-[360px] text-center leading-relaxed">
