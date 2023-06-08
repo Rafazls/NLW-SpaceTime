@@ -39,7 +39,7 @@ export default function App() {
         <Nlwlogo />
         <View className="space-y-2">
           <Text className="leading-tigh text-center font-title text-2xl text-gray-50">
-            Sua cápsula do tempo
+            Sua cápsula do tempo!
           </Text>
           <Text className="text-center font-body text-base leading-relaxed text-gray-100">
             Colecione momentos marcantes da sua jornada e compartilhe (se
